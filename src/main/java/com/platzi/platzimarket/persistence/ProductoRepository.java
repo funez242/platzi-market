@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 //como esta clase va a interactuar con la base de datos se le pone la anotacion de repository
-@Repositorygit status
+@Repository
 public class ProductoRepository {
     private ProductoCrudRepository productoCrudRepository;
 
@@ -32,8 +32,8 @@ public class ProductoRepository {
         return productoCrudRepository.save(producto);
     }
 
-    public void delete(Producto producto){
-         productoCrudRepository.deleteById(producto);
+    public void delete(int idProducto){
+         productoCrudRepository.deleteById(idProducto);
     }
 
 }

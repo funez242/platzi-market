@@ -17,8 +17,8 @@ public interface ProductoCrudRepository extends CrudRepository<Producto, Integer
     List<Producto> findByIdCategoria(int idCategoria);
 
     // Igual se podria Usar la anotacion @Query de la siguiente manera
-    @Query(value = "SELECT * FROM productos WHERE id_categoria = ?",nativeQuery = true);
-    List<Producto> getByCategoria(int idCategoria);//En este caso podemos nombrar el metodo como querramos
+    //@Query(value = "SELECT * FROM productos WHERE id_categoria = ?",nativeQuery = true);
+    //List<Producto> getByCategoria(int idCategoria);//En este caso podemos nombrar el metodo como querramos
 
     // Los query methods tambien soportan los operadores opcionales de la nuevas versiones de Java
     // no olvifrmod que los parametros se deben llamar como estan en nuestra clase
