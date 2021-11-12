@@ -16,6 +16,7 @@ public class ComprasProducto {
     private Boolean estado;
 
     @ManyToOne
+    @MapsId("idCompra")//Para que cuando compras producto se vaya a guardae en cascada va a saber a que clase promaria pertenece cada uno de los productos de una compra
     @JoinColumn(name = "id_compra", insertable = false, updatable = false)
     private Compra compra;
 
@@ -55,5 +56,21 @@ public class ComprasProducto {
 
     public void setEstado(boolean estado) {
         this.estado = estado;
+    }
+
+    public Boolean getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Boolean estado) {
+        this.estado = estado;
+    }
+
+    public Compra getCompra() {
+        return compra;
+    }
+
+    public void setCompra(Compra compra) {
+        this.compra = compra;
     }
 }

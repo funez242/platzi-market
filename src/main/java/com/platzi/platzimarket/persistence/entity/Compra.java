@@ -29,7 +29,7 @@ public class Compra {
     @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
     private Cliente cliente;
 
-    @OneToMany(mappedBy = "producto")
+    @OneToMany(mappedBy = "compra",cascade = {CascadeType.ALL})//Cascate indica que todos los procesos que se hagan contra a base de datos de una compra van a incluir en cascada sus productos
     private List<ComprasProducto> productos;
 
 //GettersSetters
@@ -81,4 +81,14 @@ public class Compra {
     public void setEstado(String estado) {
         this.estado = estado;
     }
+
+    public List<ComprasProducto> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(List<ComprasProducto> productos) {
+        this.productos = productos;
+    }
+
+
 }
