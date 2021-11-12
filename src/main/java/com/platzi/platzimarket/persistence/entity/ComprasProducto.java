@@ -12,8 +12,8 @@ public class ComprasProducto {
     private ComprasProductoPK id;
 
     private Integer cantidad;
-    private BigDecimal total;
-    private boolean estado;
+    private Double total;
+    private Boolean estado;
 
     @ManyToOne
     @JoinColumn(name = "id_compra", insertable = false, updatable = false)
@@ -22,6 +22,9 @@ public class ComprasProducto {
     @ManyToOne
     @JoinColumn(name = "id_producto", insertable = false, updatable = false)
     private Producto producto;
+
+    //gettsrsAndsetters
+
     public ComprasProductoPK getId() {
         return id;
     }
@@ -38,11 +41,11 @@ public class ComprasProducto {
         this.cantidad = cantidad;
     }
 
-    public BigDecimal getTotal() {
+    public Double getTotal() {
         return total;
     }
 
-    public void setTotal(BigDecimal total) {
+    public void setTotal(Double total) {
         this.total = total;
     }
 

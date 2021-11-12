@@ -24,6 +24,8 @@ public class Cliente {
     @OneToMany(mappedBy = "cliente")
     private List<Compra> compras;
 
+    //GettersAndSetters
+
     public String getId() {
         return id;
     }

@@ -5,6 +5,7 @@ import com.platzi.platzimarket.domain.repository.ProductRepository;
 import com.platzi.platzimarket.persistence.crud.ProductoCrudRepository;
 import com.platzi.platzimarket.persistence.entity.Producto;
 import com.platzi.platzimarket.persistence.mapper.ProductMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -13,7 +14,9 @@ import java.util.Optional;
 //como esta clase va a interactuar con la base de datos se le pone la anotacion de repository
 @Repository
 public class ProductoRepository implements ProductRepository {// Orientamos este repositorio al dominio haciendo que implemente ProductRspository
+    @Autowired
     private ProductoCrudRepository productoCrudRepository;
+    @Autowired
     private ProductMapper mapper;
 
     @Override

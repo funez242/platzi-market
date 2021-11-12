@@ -20,6 +20,6 @@ public interface CategoryMapper {
     //Alguna vez podriamos requerir el mapeo inverso
     //Esto es muy facil si usamos la siguiente notacion
     @InheritInverseConfiguration// esto hace el mapeo completo de categorias pero recordemos que el atributo productos no lo vamos a mapear
-    @Mapping(target = "productos", ignore = true) // con esto omitomos que se mapee productos
+    @Mapping(target = "productos", ignore = true) // con esto omitimos que se mapee productos
     Categoria toCategoria(Category category);
 }
